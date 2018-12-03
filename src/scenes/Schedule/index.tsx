@@ -1,9 +1,6 @@
-import * as React from "react";
-import {History} from "history";
-import ClassRoom from "../../models/classroom";
-import ClassRoomItem from "../../components/ClassRooms";
-import ClassRoomService from '../../services/ClassRoom/default'
-import Endpoints from "../../endpoints";
+import * as React from 'react';
+import { History } from 'history';
+import DefaultClassRoomService from '../../services/ClassRoom/default';
 
 interface Props {
     history: History
@@ -11,23 +8,20 @@ interface Props {
 
 export default class ScheduleScene extends React.Component<Props, {}> {
 
-    private classRooms: ClassRoom.Model[]
+    private classRooms: any[]
 
-    componentDidMount() {
-        this.classRooms = this.fetcher(Endpoints.ClassRooms.all)
+    private classRoomService: DefaultClassRoomService
+
+    async componentDidMount() {
+        await this.classRoomService.all()
     }
 
     render() {
-        const classRooms = this.classRooms.map((room: ClassRoom.Model) => <ClassRoomItem classRooms={room}/>)
-        console.log(classRooms)
+        // const classRooms = this.classRooms.map((room: ClassRoom.Model) => <ClassRoomItem classRooms={room}/>);
         return (
             <div>
-                {classRooms}
+                asdasd
             </div>
-        )
-    }
-
-    private fetcher = (url: string, body?: any): Promise<ClassRoom.Model[]> => {
-        return fetch(url,{method: 'GET'}).then(result => result.json())
+        );
     }
 }
