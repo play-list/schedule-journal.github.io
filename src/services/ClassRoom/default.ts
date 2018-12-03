@@ -6,8 +6,7 @@ export default class DefaultClassRoomService implements ClassRoomService  {
 
     private fetcher: Fetcher
 
-    async all(body?: any, params?: Object) {
-        console.log(this.fetcher.get(Endpoints.ClassRooms.all))
-        return await this.fetcher.get(Endpoints.ClassRooms.all)
+    all(body?: any, params?: Object) {
+        return this.fetcher.get(Endpoints.ClassRooms.all, params)
     }
 }
