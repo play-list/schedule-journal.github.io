@@ -1,12 +1,14 @@
-import { ClassRoomService } from '../index';
-import Fetcher from '../../utils/dispatcher';
-import Endpoints from '../../endpoints';
+import { action } from 'mobx';
+import { initRequest } from '../../utils/dispatcher';
 
-export default class DefaultClassRoomService implements ClassRoomService  {
+const FetchClassRoom = (url: string, params?: Object) => action(() => {
+     fetch(initRequest(url, params), {method: 'get'})
+         .then(res => {
+             res.json()
+                 .then(response => {
+                     return response
+                 })
+         })
+})
 
-    private fetcher: Fetcher
-
-    all(body?: any, params?: Object) {
-        return this.fetcher.get(Endpoints.ClassRooms.all, params)
-    }
-}
+export default FetchClassRoom

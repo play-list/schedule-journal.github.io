@@ -8,7 +8,7 @@ namespace Lesson {
         id: number
 
         @observable
-        title: string
+        name: string
 
         @observable
         type: LESSON_TYPE
@@ -21,6 +21,9 @@ namespace Lesson {
 
         @observable
         end: string
+
+        @observable
+        sub_group: number
 
         @observable
         studentGroups: StudentGroup.Model[]

@@ -7,12 +7,6 @@ namespace StudentGroup {
 
         @observable
         name: string
-
-        @observable
-        totalCount: number
-
-        @observable
-        student: string
     }
 }
 

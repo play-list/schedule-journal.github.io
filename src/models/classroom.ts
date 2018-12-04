@@ -10,6 +10,10 @@ namespace ClassRoom {
         lessons: Lesson.Model[]
     }
 
+    export class Wrapper {
+        @observable
+        classRooms: Model[] | []
+    }
 }
 
 export default ClassRoom
