@@ -1,0 +1,35 @@
+@import "../../colors";
+
+.lesson_item {
+  background-color: $practice;
+  padding: 7px 10px;
+  color: #FFFFFF;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  .lesson_info {
+    display: flex;
+    margin-bottom: 10px;
+    .group_name {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 14px;
+      margin: 5px 0;
+      flex: 1;
+    }
+    .lesson_duration {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 2;
+      font-size: 14px;
+    }
+  }
+  .lesson_description {
+    margin: 10px 0;
+    font-size: 12px;
+  }
+  .lesson_name {
+    font-size: 13px;
+  }
+}

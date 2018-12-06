@@ -7,6 +7,10 @@ import { observer } from 'mobx-react';
 import ClassRoom from '../../models/classroom';
 import ClassRoomItem from '../../components/ClassRooms';
 
+import './index.scss'
+import ScheduleTimeline from "../../components/Schedule/Timeline";
+import ScheduleHeader from "../../components/Schedule/Header";
+
 interface Props {
     history: History
 }
@@ -24,12 +28,15 @@ export default class ScheduleScene extends React.Component<Props, {}> {
     render() {
         return (
             <div>
+                <ScheduleHeader/>
+                <ScheduleTimeline/>
                 <div className='class_room'>
                     {this.classRooms.map((room: ClassRoom.Model, index: number) =>
                         <ClassRoomItem
-                            key={index}
-                            classRooms={room}
-                        />)}
+                        key={index}
+                        classRooms={room}
+                        />)
+                    }
                 </div>
             </div>
         );

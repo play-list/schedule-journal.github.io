@@ -14,7 +14,7 @@ namespace Lesson {
         type: LESSON_TYPE
 
         @observable
-        description: string
+        desciption: string
 
         @observable
         beginning: string
@@ -26,7 +26,7 @@ namespace Lesson {
         sub_group: number
 
         @observable
-        studentGroups: StudentGroup.Model[]
+        group: StudentGroup.Model
     }
 }
 
