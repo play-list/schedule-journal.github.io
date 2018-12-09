@@ -9,7 +9,7 @@ var Endpoints = /** @class */ (function () {
             }
             return class_1;
         }()),
-        _a.all = origin('/schedule?date=2018-12-01'),
+        _a.all = origin('/schedule'),
         _a);
     return Endpoints;
 }());

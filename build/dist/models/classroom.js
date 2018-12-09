@@ -14,6 +14,15 @@ var ClassRoom;
         return Model;
     }());
     ClassRoom.Model = Model;
+    var Wrapper = /** @class */ (function () {
+        function Wrapper() {
+        }
+        tslib_1.__decorate([
+            observable
+        ], Wrapper.prototype, "classRooms", void 0);
+        return Wrapper;
+    }());
+    ClassRoom.Wrapper = Wrapper;
 })(ClassRoom || (ClassRoom = {}));
 export default ClassRoom;
 //# sourceMappingURL=classroom.js.map

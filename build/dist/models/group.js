@@ -11,12 +11,6 @@ var StudentGroup;
         tslib_1.__decorate([
             observable
         ], Model.prototype, "name", void 0);
-        tslib_1.__decorate([
-            observable
-        ], Model.prototype, "totalCount", void 0);
-        tslib_1.__decorate([
-            observable
-        ], Model.prototype, "student", void 0);
         return Model;
     }());
     StudentGroup.Model = Model;

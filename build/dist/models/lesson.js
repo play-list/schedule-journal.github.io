@@ -10,7 +10,7 @@ var Lesson;
         ], Model.prototype, "id", void 0);
         tslib_1.__decorate([
             observable
-        ], Model.prototype, "title", void 0);
+        ], Model.prototype, "name", void 0);
         tslib_1.__decorate([
             observable
         ], Model.prototype, "type", void 0);
@@ -25,7 +25,10 @@ var Lesson;
         ], Model.prototype, "end", void 0);
         tslib_1.__decorate([
             observable
-        ], Model.prototype, "studentGroups", void 0);
+        ], Model.prototype, "sub_group", void 0);
+        tslib_1.__decorate([
+            observable
+        ], Model.prototype, "group", void 0);
         return Model;
     }());
     Lesson.Model = Model;

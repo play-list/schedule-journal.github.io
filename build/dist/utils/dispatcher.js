@@ -1,19 +1,8 @@
-var Fetcher = /** @class */ (function () {
-    function Fetcher() {
+export var initRequest = function (url, params) {
+    var initURL = new URL(url);
+    if (params) {
+        Object.keys(params).forEach(function (key) { return initURL.searchParams.append(key, params[key]); });
     }
-    Fetcher.prototype.get = function (url, body) {
-        fetch(url, { method: 'GET', body: body }).then(function (result) { return result.json(); });
-    };
-    Fetcher.prototype.post = function (url, body) {
-        return fetch(url, { method: 'POST', body: body });
-    };
-    Fetcher.prototype.delete = function (url, body) {
-        return fetch(url, { method: 'POST', body: body });
-    };
-    Fetcher.prototype.put = function (url, body) {
-        return fetch(url, { method: 'POST', body: body });
-    };
-    return Fetcher;
-}());
-export { Fetcher };
+    return "" + initURL.href;
+};
 //# sourceMappingURL=dispatcher.js.map

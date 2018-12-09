@@ -20,7 +20,8 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "eject": "react-scripts-ts eject",
+    "postinstall": "tsc"
   },
   "devDependencies": {
     "@types/jest": "^23.3.10",
@@ -36,6 +37,7 @@
     "not op_mini all"
   ],
   "engines": {
-    "node": "10.14.1"
+    "node": "10.14.1",
+    "npm": "6.4.1"
   }
 }
