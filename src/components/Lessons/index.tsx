@@ -26,7 +26,7 @@ export default class LessonCard extends React.Component<Props, {}> {
                     {lesson.name}
                 </div>
                 <div className='lesson_description'>
-                    {lesson.desciption}
+                    {lesson.description}
                 </div>
             </div>
         )

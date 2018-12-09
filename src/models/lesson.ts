@@ -14,7 +14,7 @@ namespace Lesson {
         type: LESSON_TYPE
 
         @observable
-        desciption: string
+        description: string
 
         @observable
         beginning: string
